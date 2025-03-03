@@ -1,0 +1,96 @@
+.header {
+  margin-left: 28px;
+}
+
+.calendar {
+  width: 256px;
+  padding: 16px;
+}
+
+.calendar-day {
+  cursor: pointer;
+  text-align: center;
+  position: relative;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  button {
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--grey-200);
+      color: white;
+      border-radius: 100%;
+    }
+  }
+
+  &.hover-range {
+    background-color: rgba(0, 255, 0, 0.2); // Light green for hover range
+    cursor: pointer;
+  }
+
+  &.selected {
+    button {
+      background-color: var(--brand-color) !important;
+      border-radius: 100%;
+      width: 100%;
+      height: 100%;
+      // padding: 8px;
+    }
+    padding: 0%;
+    // background-color: transparent;
+    background-color: rgba(0, 255, 0, 0.2) !important;
+    color: white !important;
+    border-radius: 50%;
+  }
+
+  &.hoverable:hover {
+    background-color: rgba(0, 102, 255, 0.2) !important;
+    border-radius: 50% !important;
+    transition: all 0.2s ease;
+  }
+
+  &.in-range {
+    background-color: rgba(0, 255, 0, 0.2);
+    color: black;
+    &:not(.range-start) {
+      margin-left: -2px;
+    }
+
+    &:not(.range-end) {
+      margin-right: -2px;
+    }
+  }
+
+  &.range-start {
+    background-color: rgba(0, 255, 0, 0.2);
+    border-top-left-radius: 9999px;
+    border-bottom-left-radius: 9999px;
+  }
+
+  &.range-end {
+    background-color: rgba(0, 255, 0, 0.2);
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+  }
+
+  &.rounded {
+    border-radius: 9999px;
+  }
+
+  &.disabled {
+    button {
+      color: var(--grey-400);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    margin: 0px;
+  }
+}

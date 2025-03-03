@@ -1,0 +1,23 @@
+.upgrade-seat {
+  max-width: 548px;
+  min-height: 267px;
+  border-radius: 12px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  & > h3 {
+    color: var(--grey-900);
+  }
+  & > p {
+    font-size: var(--font-lg);
+    color: var(--grey-400);
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 12px;
+}

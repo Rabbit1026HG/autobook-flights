@@ -1,0 +1,48 @@
+.hero {
+  padding: 8px 0 50px 0;
+  background-image: url('/images/world-map.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  .hero-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    width: 631px;
+    margin: auto;
+    margin-top: 120px;
+    line-height: 90px;
+    font-size: 96px;
+    font-weight: 800;
+    text-align: center;
+    color: var(--brand-color);
+    overflow: hidden;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+@media (max-width: 650px) {
+  .hero {
+    padding: 8px 0 20px 0;
+    .hero-text {
+      height: auto;
+      width: 100%;
+      margin-top: 80px;
+      line-height: 50px;
+      font-size: 56px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    .hero-text {
+      height: auto;
+      width: 100%;
+      margin-top: 80px;
+      line-height: 40px;
+      font-size: 46px;
+    }
+  }
+}

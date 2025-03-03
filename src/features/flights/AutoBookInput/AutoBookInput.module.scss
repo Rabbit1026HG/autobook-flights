@@ -1,0 +1,34 @@
+.autobook-wrapper {
+  padding-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: end;
+  justify-content: end;
+  .autobook-label {
+    color: var(--grey-800);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+  & > div {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: end;
+    gap: 16px;
+  }
+  & > div > div {
+    width: 200px;
+  }
+}
+
+@media (max-width: 665px) {
+  .autobook-wrapper {
+    flex-direction: column;
+    width: 100%;
+    .autobook-button {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.passenger-list-container {
+  position: relative;
+  min-width: 215px;
+  > div:last-of-type {
+    display: none;
+  }
+  > div:last-of-type[aria-expanded='true'] {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    z-index: 100;
+    padding: 16px;
+    right: 0px;
+    background-color: white;
+    border-radius: 4px;
+    min-width: 215px;
+    border: 1px solid var(--grey-200);
+    box-shadow: var(--elevation-medium);
+  }
+}

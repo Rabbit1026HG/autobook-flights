@@ -1,0 +1,33 @@
+.passenger-title {
+  color: var(--grey-600);
+  margin-bottom: 16px;
+  margin-top: 20px;
+}
+
+.second {
+  display: grid;
+  grid-template-columns: 4fr 4fr 4fr;
+  gap: 20px;
+}
+
+.second {
+  grid-template-columns: 6fr 6fr;
+  margin: 30px 0 10px 0;
+}
+.error {
+  color: red;
+}
+.first-one,
+.first-two {
+  display: flex;
+  gap: 20px;
+  padding-top: 20px;
+  & > div {
+    width: 100%;
+  }
+}
+@media (max-width: 450px) {
+  .first-one {
+    gap: 10px;
+  }
+}

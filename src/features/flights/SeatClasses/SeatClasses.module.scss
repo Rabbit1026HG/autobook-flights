@@ -1,0 +1,117 @@
+.seat-classes {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header {
+  display: flex;
+  height: 88px;
+  background-color: var(--grey-900);
+  color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 100;
+  & > div {
+    padding: 20px 24px;
+    &:first-of-type {
+      display: flex;
+      flex: 1;
+      align-items: center;
+      justify-content: center;
+      svg path {
+        stroke: white;
+      }
+      & > div {
+        &:first-of-type {
+          padding-right: 24px;
+        }
+        &:last-of-type {
+          padding-left: 24px;
+        }
+        &:nth-of-type(2) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.code {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.progress-step {
+  flex: 1;
+  &:hover {
+    cursor: pointer;
+    background-color: var(--grey-700);
+  }
+  &[aria-selected='true'] {
+    background-color: var(--brand-color);
+  }
+  & > p {
+    &:last-of-type {
+      font-size: var(--font-xs);
+      color: var(--purple-extra-light);
+      margin-top: 4px;
+    }
+    span {
+      color: var(--grey-400);
+    }
+  }
+}
+
+.classes-comparison {
+  flex: 1;
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(24px);
+  padding: 0 16px;
+  img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+.footer {
+  background-color: white;
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+}
+@media (max-width: 930px) {
+  .seat-classes {
+    padding-top: 20px;
+  }
+  .footer {
+    position: relative;
+  }
+}
+@media (max-width: 465px) {
+  .seat-classes {
+    padding-top: 20px;
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    & > div {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-direction: row-reverse;
+      align-items: center;
+      p {
+        margin: 0 !important;
+      }
+    }
+  }
+  .classes-comparison {
+    flex-direction: column;
+  }
+}

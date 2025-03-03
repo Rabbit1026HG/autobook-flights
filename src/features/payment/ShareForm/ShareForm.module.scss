@@ -1,0 +1,23 @@
+.share-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  h3 {
+    color: var(--grey-600);
+  }
+
+  p {
+    color: var(--grey-400);
+    max-width: 600px;
+  }
+  & > div {
+    max-width: 500px;
+  }
+
+  .button-group {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,18 @@
+.plane-svg {
+  .bussiness-seat {
+    &.available:hover {
+      rect {
+        fill: rgba(0, 155, 127, 1);
+        cursor: pointer;
+      }
+    }
+  }
+  .economy-seat {
+    &.available:hover {
+      rect {
+        fill: var(--purple-dark);
+        cursor: pointer;
+      }
+    }
+  }
+}

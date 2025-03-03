@@ -1,0 +1,64 @@
+.searchbar {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 80px auto 0 auto;
+  box-shadow: var(--elevation-medium);
+  border-radius: 4px;
+  user-select: none;
+  & > div {
+    display: flex;
+  }
+  & > div > div {
+    display: flex;
+  }
+}
+.cabin-select {
+  min-width: 215px;
+}
+
+.searchbar :global(.from-where .input-container),
+.searchbar :global(.where-to .input-container),
+.searchbar :global(.passenger-count .input-container),
+.searchbar :global(.date-picker-container > .input-container) {
+  & > div {
+    border-radius: 0px;
+    border: 1px solid var(--grey-200);
+  }
+}
+
+@media (max-width: 1280px) {
+  .searchbar {
+    flex-direction: column;
+    width: 100%;
+    & > div {
+      width: 100%;
+    }
+    & > div > div {
+      width: 50%;
+    }
+    & > div > div > div {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .searchbar {
+    & > div {
+      flex-direction: column;
+    }
+    & > div > div {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 600px) {
+  .searchbar {
+    & > div > div {
+      flex-direction: column;
+    }
+    & > div > div {
+      width: 100%;
+    }
+  }
+}

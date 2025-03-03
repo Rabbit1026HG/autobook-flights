@@ -1,0 +1,114 @@
+.footer {
+  .top-container {
+    padding: 60px 120px 24px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(33%, 1fr));
+    flex-wrap: wrap;
+    & > div {
+      padding: 16px 0 16px 16px;
+    }
+    .logo {
+      a {
+        display: block;
+        img {
+          height: 28px;
+        }
+      }
+    }
+    .link {
+      padding: 4px;
+      a {
+        color: var(--grey-400);
+        &:hover {
+          color: var(--purple-dark);
+        }
+      }
+    }
+    .title {
+      color: var(--grey-600);
+      padding: 4px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .download {
+      margin-top: 18px;
+      a {
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        &:last-child {
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+  .bottom-container {
+    padding: 12px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -1px;
+      display: block;
+      height: 1px;
+      width: 100%;
+      background-color: var(--grey-300);
+    }
+    .social {
+      display: flex;
+      padding: 8px;
+      gap: 20px;
+      a {
+        display: block;
+        svg path {
+          fill: var(--grey-600);
+        }
+      }
+      a:hover {
+        svg path {
+          fill: var(--purple-dark);
+        }
+      }
+    }
+    p {
+      color: var(--grey-400);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    .top-container {
+      // grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+      padding: 60px 40px 40px;
+    }
+    .bottom-container {
+      padding: 16px 40px;
+    }
+  }
+}
+@media (max-width: 690px) {
+  .footer {
+    .top-container {
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .footer {
+    .top-container {
+      padding: 60px 32px 32px;
+    }
+    .bottom-container {
+      padding: 16px 32px;
+      .copyright {
+        font-size: var(--font-xs);
+      }
+    }
+  }
+}

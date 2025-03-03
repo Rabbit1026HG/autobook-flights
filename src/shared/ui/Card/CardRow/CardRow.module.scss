@@ -1,0 +1,52 @@
+.card-row {
+  width: 100%;
+  button {
+    margin: 80px auto 40px auto;
+  }
+}
+.header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.view-all {
+  display: flex;
+  align-items: center;
+  font-size: var(--font-xl);
+  cursor: pointer;
+  color: var(--grey-300);
+  svg path {
+    stroke: var(--grey-300);
+  }
+}
+.view-all:hover {
+  color: var(--turquoise);
+  svg path {
+    stroke: var(--turquoise);
+  }
+}
+.title span {
+  color: var(--turquoise);
+}
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-gap: 40px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 500px) {
+  .header {
+    h3 {
+      font-size: 20px;
+    }
+  }
+  .view-all {
+    font-size: 16px;
+    svg {
+      height: 24px;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.selected-flights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  // padding-top: 72px;
+}
+@media (max-width: 1024px) {
+  .selected-flights {
+    padding-top: 0px;
+  }
+}
+.flights {
+  border: 1px solid var(--purple-extra-light);
+  border: 1px solid var(--purple-extra-light);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: self-end;
+}
+
+.details {
+  h5 {
+    // width: 200px;
+    color: var(--grey-900);
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: self-end;
+    span {
+      display: block;
+      text-align: right;
+    }
+  }
+  .detail-value {
+    width: 90px;
+  }
+  .autobook {
+    color: red;
+  }
+}

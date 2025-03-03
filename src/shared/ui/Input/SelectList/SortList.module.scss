@@ -1,0 +1,57 @@
+.select-list-container {
+  position: relative;
+  .select-list-menu {
+    display: none;
+    li {
+      border-radius: 4px;
+      padding: 4px 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+      &:hover:not([aria-selected='true']) {
+        background-color: var(--brand-color);
+        color: var(--purple-white);
+      }
+      &[aria-selected='true'] {
+        background-color: var(--purple-extra-light);
+      }
+    }
+  }
+
+  .sortItem {
+    user-select: none;
+    color: var(--brand-color);
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+  }
+  .sortItem:hover {
+    background-color: #22c3a60c;
+  }
+  .sortItem:active {
+    background-color: #22c3a638;
+  }
+
+  .select-list-menu[aria-expanded='true'] {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    position: absolute;
+    z-index: 100;
+    padding: 16px;
+    top: 40px;
+    right: 5px;
+    background-color: white;
+    border-radius: 4px;
+    min-width: 200px;
+    border: 1px solid var(--grey-200);
+    box-shadow: var(--elevation-medium);
+    max-height: 312px;
+    overflow-y: auto;
+  }
+}

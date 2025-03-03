@@ -1,0 +1,48 @@
+.times-filter {
+  position: relative;
+  .times-select {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--elevation-medium);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 15px 40px 20px;
+    z-index: 100;
+    top: 40px;
+    & > div {
+      display: flex;
+      align-items: center;
+      // padding: 2px 0px;
+    }
+    & > div > span {
+      padding-left: 8px;
+      color: var(--brand-color);
+    }
+  }
+  .time-state {
+    position: relative;
+    padding: 0px;
+    .line {
+      position: absolute;
+      bottom: 0;
+      z-index: -10;
+      width: 100%;
+      border-top: 1px solid gray;
+    }
+  }
+  .time-state-item {
+    padding: 4px 8px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0);
+    cursor: pointer;
+  }
+  .time-state-item:hover {
+    background-color: rgba(0, 0, 0, 0.055);
+  }
+  .selected {
+    border-bottom: 2px solid var(--brand-color);
+  }
+}

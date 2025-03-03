@@ -1,0 +1,9 @@
+.emergency-form > div:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.title {
+  color: var(--grey-600);
+  margin-bottom: 16px;
+}

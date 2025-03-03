@@ -1,0 +1,23 @@
+.price-info {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .price-info-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--grey-600);
+  }
+  .total-price {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: var(--grey-800);
+    font-size: large;
+    border-top: 1px solid var(--grey-200);
+    border-bottom: 1px solid var(--grey-200);
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}

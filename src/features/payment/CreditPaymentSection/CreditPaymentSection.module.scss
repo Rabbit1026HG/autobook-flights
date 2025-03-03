@@ -1,0 +1,45 @@
+.payment-details-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 500px;
+}
+
+.title {
+  font-size: 18px;
+  color: var(--grey-600);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  .details-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    & > div {
+      width: 50%;
+    }
+  }
+}
+
+.expireation-date {
+  display: flex;
+  flex-direction: column;
+  & > p {
+    color: var(--grey-400);
+    padding: 4px;
+    font-size: small;
+  }
+}
+
+.ccv {
+  position: relative;
+  svg {
+    position: absolute;
+    top: 15px;
+    right: 12px;
+  }
+}

@@ -1,0 +1,32 @@
+.confirm-card {
+  margin-top: 12px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--elevation-light);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: var(--green-light);
+  border: 1px solid var(--deep-green);
+  p {
+    padding: 18px;
+    color: var(--deep-green);
+  }
+}
+
+.close-button {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  padding: 8px 4px;
+  svg {
+    width: 32px;
+    height: 32px;
+  }
+  svg path {
+    stroke: var(--grey-100);
+  }
+  &:hover svg path {
+    stroke: var(--grey-200);
+  }
+}

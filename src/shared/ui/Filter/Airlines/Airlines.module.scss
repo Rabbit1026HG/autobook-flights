@@ -1,0 +1,57 @@
+.airlines-filter {
+  position: relative;
+  .airlines-select {
+    width: 280px;
+    height: 600px;
+    overflow-y: scroll;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--elevation-medium);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px;
+    z-index: 100;
+    top: 40px;
+    // left: 0px;
+    .all-select {
+      display: flex;
+      justify-content: space-between;
+    }
+    .sub-title {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 14px;
+    }
+    .airlines-list {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 12px;
+      cursor: pointer;
+      user-select: none;
+      & > div {
+        display: flex;
+        gap: 10px;
+      }
+      .only-btn {
+        opacity: 0;
+        border-radius: 20px;
+        padding: 4px 12px;
+        color: var(--brand-color);
+      }
+    }
+    .airlines-list:hover {
+      .only-btn {
+        opacity: 100%;
+        background-color: rgba(128, 128, 128, 0.062);
+      }
+    }
+    .alliances-list {
+      display: flex;
+      align-items: center;
+      padding: 4px 12px;
+      gap: 10px;
+    }
+  }
+}

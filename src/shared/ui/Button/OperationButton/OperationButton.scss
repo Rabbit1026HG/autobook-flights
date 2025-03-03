@@ -1,0 +1,33 @@
+.op-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--grey-100);
+  border-radius: 4px;
+  border: 0;
+  padding: 0;
+  color: var(--brand-color);
+  height: fit-content;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  svg path {
+    fill: var(--brand-color);
+  }
+  &:hover {
+    background-color: var(--purple-extra-light);
+  }
+  &:active {
+    background-color: var(--purple-light);
+  }
+  &:focus-visible {
+    background-color: var(--grey-100);
+    border: 1px solid var(--brand-color);
+    outline: none;
+  }
+  &:disabled {
+    background-color: var(--grey-100);
+    color: var(--grey-300);
+    cursor: not-allowed;
+  }
+}

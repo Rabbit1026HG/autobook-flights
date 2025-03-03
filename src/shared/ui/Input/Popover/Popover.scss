@@ -1,0 +1,22 @@
+.popover {
+  border-radius: 4px;
+  height: 32px;
+  padding-left: 13px;
+  padding-right: 13px;
+  transition: all 0.3s ease;
+  color: var(--grey-900);
+  &:hover {
+    color: var(--purple-white);
+    background-color: var(--brand-color);
+    cursor: pointer;
+  }
+  &[aria-selected='true'] {
+    background-color: var(--purple-extra-light);
+    color: var(--grey-900);
+  }
+  &[aria-disabled='true'] {
+    color: var(--grey-300);
+    background-color: #fff;
+    cursor: default;
+  }
+}

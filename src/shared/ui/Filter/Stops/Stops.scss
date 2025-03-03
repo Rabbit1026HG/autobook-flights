@@ -1,0 +1,17 @@
+.stop-filter {
+  position: relative;
+  .stops-select {
+    width: 230px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--elevation-medium);
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    gap: 16px;
+    padding: 20px 15px 20px 20px;
+    z-index: 100;
+    top: 40px;
+  }
+}

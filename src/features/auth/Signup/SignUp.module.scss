@@ -1,0 +1,88 @@
+.signup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 500px;
+  padding: 40px;
+  border-radius: 12px;
+  & > div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    color: var(--grey-600);
+  }
+  p {
+    color: var(--grey-400);
+  }
+}
+.close {
+  cursor: pointer;
+  path {
+    fill: var(--grey-600);
+  }
+  &:hover {
+    path {
+      fill: var(--red);
+    }
+  }
+}
+
+.error {
+  color: var(--red);
+  padding: 0px 4px 0px 4px;
+  // font-size: 14px;
+}
+
+.or {
+  display: flex;
+  align-items: center;
+  color: var(--grey-400);
+  &::before,
+  &::after {
+    flex: 1;
+    content: '';
+    padding: 0.5px;
+    background-color: var(--grey-200);
+    margin: 4px;
+  }
+}
+
+.signup :global(.button) {
+  span:nth-of-type(2) {
+    flex: 1;
+  }
+}
+.signup :global(.google-btn) {
+  svg {
+    path:nth-of-type(1) {
+      fill: #34a853;
+    }
+    path:nth-of-type(2) {
+      fill: #4285f4;
+    }
+    path:nth-of-type(3) {
+      fill: #fbbc05;
+    }
+    path:nth-of-type(4) {
+      fill: #eb4335;
+    }
+  }
+}
+.signup :global(.fb-btn) {
+  svg {
+    path:nth-of-type(1) {
+      fill: var(--blue);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .signup {
+    width: 300px;
+    padding: 20px;
+  }
+  .error {
+    font-size: 12px;
+  }
+}

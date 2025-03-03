@@ -1,0 +1,257 @@
+.inner-container {
+  display: flex;
+  flex-direction: row;
+  gap: 160px;
+  // margin-top: 40px;
+  margin-bottom: 40px;
+
+  .left {
+    width: 66.66%;
+  }
+
+  .right {
+    width: 33.33%;
+    padding-top: 76px;
+    display: flow;
+  }
+}
+.title {
+  color: var(--brand-color);
+  margin-bottom: 16px;
+  margin-top: 40px;
+}
+.review-title {
+  color: var(--brand-color);
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+.seat-option {
+  margin-top: 32px;
+}
+
+.divider {
+  height: 1px;
+  background-color: #ccc;
+  margin: 30px 0;
+}
+
+.description {
+  color: var(--grey-400);
+  margin-bottom: 15px;
+}
+
+.control-group {
+  display: flex;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  .policy {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .policy-title {
+      color: var(--grey-600);
+    }
+    .policy-description {
+      color: var(--grey-400);
+    }
+  }
+}
+
+.secure-form > div:first-of-type {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.secure-form-title {
+  color: var(--grey-600);
+  margin-bottom: 16px;
+}
+.payment-options {
+  display: flex;
+  overflow: hidden;
+  align-items: normal;
+  border-radius: 5px;
+  border: 1px solid var(--brand-color);
+  width: fit-content;
+  margin-bottom: 30px;
+  color: var(--grey-400);
+  .payment-button {
+    display: flex;
+    align-items: center;
+    padding: 12px 10px;
+    gap: 4px;
+    font-size: medium;
+    color: var(--brand-color);
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    svg {
+      path {
+        fill: var(--brand-color);
+      }
+    }
+  }
+
+  .selected {
+    color: white;
+    background-color: var(--brand-color);
+    svg {
+      path {
+        fill: white;
+      }
+    }
+  }
+}
+
+.total-container {
+  width: 100%;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.details {
+  position: fixed;
+  display: flex;
+  // right: 64px;
+  flex-direction: column;
+  gap: 16px;
+  h5 {
+    color: var(--grey-900);
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: self-end;
+    span {
+      display: block;
+      text-align: right;
+    }
+    padding-left: 10px;
+  }
+  .detail-title {
+    font-size: 30px;
+  }
+  .detail-title-description {
+    // font-size: 14px;
+    color: var(--grey-400);
+  }
+  .autobook-content {
+    color: red;
+  }
+}
+
+.view-seat {
+  margin-top: 40px;
+  .seat-title {
+    display: flex;
+    align-items: center;
+  }
+  .view-seat-content {
+    padding-left: 15px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.bag-passenger-info {
+  margin-top: 40px;
+  .bag-passenger-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+  }
+  .bag-info-container {
+    border: 1px solid var(--purple-extra-light);
+    border: 1px solid var(--purple-extra-light);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    .bag-info-row {
+      position: relative;
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: start;
+      padding: 16px;
+      color: var(--grey-900);
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+      }
+      // > div:last-of-type {
+      //   align-items: flex-end;
+      // }
+      &::after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 1px;
+        background-color: var(--purple-extra-light);
+        left: 0;
+        bottom: -8px;
+      }
+      &:last-of-type::after {
+        display: none;
+      }
+      .sub-title {
+        font-size: 14px;
+        color: var(--grey-400);
+      }
+      .main-content {
+        font-size: 24px;
+      }
+      .sub-content {
+        font-size: 12px;
+        color: var(--grey-400);
+      }
+    }
+  }
+}
+
+@media (max-width: 1326px) {
+  .inner-container {
+    gap: 120px;
+  }
+  .details {
+    right: 64px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .inner-container {
+    flex-direction: column;
+    gap: 80px;
+    .left {
+      width: 100%;
+    }
+    .right {
+      display: none;
+      padding-top: 0px;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .payment-options {
+    width: fit-content;
+    .payment-button {
+      padding: 16px 3px;
+      font-size: small;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.slider-value {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.range-slider-1 {
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--brand-color);
+  outline: none;
+  // opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+.range-slider-1::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  background-color: var(--brand-color);
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 1px #ced4da;
+  cursor: pointer;
+  height: 18px;
+  width: 18px;
+}

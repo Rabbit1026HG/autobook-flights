@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+  color: var(--grey-600);
+  margin-bottom: 24px;
+  span {
+    color: var(--brand-color);
+  }
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+}

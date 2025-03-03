@@ -1,0 +1,88 @@
+.confirm-page {
+  display: flex;
+  flex-direction: row;
+  gap: 64px;
+  .left {
+    width: 66.66%;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .right {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.confirm-info {
+  .confirm-name {
+    color: var(--brand-color);
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .confirm-number {
+    font-size: large;
+    color: var(--grey-600);
+    padding-bottom: 18px;
+  }
+
+  .confirm-description {
+    color: var(--grey-400);
+  }
+}
+
+.summary {
+  h3 {
+    color: var(--grey-600);
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .flight-summary {
+    h4 {
+      color: var(--grey-600);
+    }
+    p {
+      color: var(--grey-400);
+    }
+  }
+}
+
+.price-breakdown {
+  h3 {
+    color: var(--grey-600);
+  }
+}
+
+.payment-method {
+  h3 {
+    color: var(--grey-600);
+    padding-bottom: 24px;
+  }
+
+  img {
+    border-radius: 20px;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .confirm-page {
+    flex-direction: column;
+    .left {
+      width: 100%;
+    }
+    .right {
+      width: 100%;
+    }
+  }
+}

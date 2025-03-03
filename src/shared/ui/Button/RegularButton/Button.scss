@@ -1,0 +1,96 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  .button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 18px;
+    width: 18px;
+  }
+  &.xs {
+    padding: 10px 16px;
+    font-size: var(--font-sm);
+  }
+  &.sm {
+    padding: 8px 16px;
+    font-size: var(--font-md);
+  }
+
+  &.md {
+    padding: 12px 20px;
+    font-size: var(--font-md);
+  }
+
+  &.lg {
+    padding: 12px 20px;
+    font-size: var(--font-lg);
+  }
+}
+
+.button.primary {
+  background-color: var(--brand-color);
+  color: var(--grey-100);
+
+  &:hover {
+    background-color: var(--purple-dark);
+  }
+
+  &.error {
+    background-color: var(--red);
+  }
+  &:disabled {
+    background-color: rgba(203, 212, 230, 0.3);
+    color: var(--grey-400);
+  }
+}
+.button.secondary {
+  border: 1px solid var(--brand-color);
+  color: var(--brand-color);
+  background-color: white;
+  &:hover {
+    background-color: var(--purple-extra-light);
+  }
+
+  &.error {
+    color: var(--red);
+    border-color: var(--red);
+    &:hover {
+      background-color: white;
+    }
+  }
+  &:disabled {
+    color: var(--grey-400);
+    border-color: var(--grey-400);
+    cursor: default;
+    &:hover {
+      background-color: white;
+    }
+  }
+}
+.button.tertiary {
+  color: var(--brand-color);
+  background-color: white;
+  &:hover {
+    color: var(--purple-dark);
+  }
+
+  &.error {
+    color: var(--red);
+    &:hover {
+      background-color: white;
+    }
+  }
+  &:disabled {
+    color: var(--grey-400);
+    cursor: default;
+    &:hover {
+      background-color: white;
+    }
+  }
+}

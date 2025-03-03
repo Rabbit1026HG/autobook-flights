@@ -1,0 +1,130 @@
+.date-picker-container {
+  position: relative;
+  width: fit-content;
+  .date-picker-onevalue {
+    min-width: 300px;
+  }
+  .date-picker-value {
+    display: flex;
+    min-width: 325px;
+  }
+
+  .date-picker {
+    width: 700px;
+    border: 1px solid var(--grey-200);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--elevation-medium);
+    position: absolute;
+    right: -111px;
+    top: -21px;
+    z-index: 100;
+    background-color: white;
+    & > .header {
+      padding: 20px 24px;
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      // align-items: center;
+      border-bottom: 1px solid var(--grey-200);
+      background-color: white;
+
+      .radio-group {
+        display: flex;
+        gap: 16px;
+        min-width: fit-content;
+      }
+      .field-group {
+        display: flex;
+        gap: 8px;
+      }
+    }
+    .slider-calendar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      padding-bottom: 16px;
+      .calendar-container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+      }
+      .icon {
+        cursor: pointer;
+        height: 32px;
+        width: 32px;
+        svg path {
+          stroke: var(--grey-600);
+        }
+      }
+      .icon:hover {
+        svg path {
+          stroke: var(--grey-400);
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1280px) {
+  .date-picker-container {
+    .date-picker {
+      left: 0px;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .date-picker-container {
+    .date-picker {
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+      border-radius: 0px;
+      .header {
+        display: flex;
+        flex-direction: column;
+        // align-items: start;
+        padding: 20px 24px;
+        .radio-group-container {
+          display: flex;
+          // justify-content: space-between;
+          align-items: center;
+          .radio-group {
+            padding: 20px 0px;
+            justify-content: center;
+            width: 100%;
+          }
+        }
+
+        .field-group {
+          width: 100%;
+        }
+        .button-container {
+          width: 100%;
+          button {
+            width: 100%;
+          }
+        }
+      }
+      .slider-calendar {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        overflow: auto;
+        height: calc(100vh - 213px);
+        div {
+          text-align: center;
+        }
+        div table {
+          width: 340px;
+          height: 280px;
+        }
+      }
+    }
+  }
+  .right-calendar {
+    display: none;
+  }
+}

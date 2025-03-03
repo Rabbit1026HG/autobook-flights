@@ -1,0 +1,39 @@
+.bag-form {
+  // margin-top: 26px;
+  & > h4:first-of-type {
+    color: var(--grey-600);
+    margin-bottom: 8px;
+  }
+  & > p:first-of-type {
+    color: var(--grey-400);
+    font-size: var(--font-lg);
+    margin-bottom: 30px;
+  }
+  a {
+    color: var(--brand-color);
+    &:hover {
+      color: var(--purple-dark);
+    }
+  }
+}
+.list {
+  max-width: 500px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.list-item {
+  display: block;
+  & > div {
+    display: flex;
+    justify-content: space-between;
+    &:first-of-type {
+      color: var(--grey-400);
+      margin-bottom: 8px;
+    }
+    &:last-of-type {
+      color: var(--grey-600);
+    }
+  }
+}

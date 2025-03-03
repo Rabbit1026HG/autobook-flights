@@ -1,0 +1,52 @@
+.review-card {
+  padding: 16px;
+  gap: 16px;
+  display: flex;
+}
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+.review-content {
+  flex-shrink: 3;
+  width: fit-content;
+  h4 {
+    color: var(--grey-600);
+  }
+  p {
+    color: var(--grey-600);
+    span {
+      color: var(--grey-300);
+    }
+  }
+  .review {
+    color: var(--grey-900);
+    a {
+      font-size: var(--font-lg);
+    }
+  }
+}
+.stars {
+  margin-top: 8px;
+}
+.star-filled path {
+  fill: var(--brand-color);
+}
+.star-half {
+  & path:first-of-type {
+    stroke: var(--brand-color);
+  }
+  & path:last-of-type {
+    fill: var(--brand-color);
+  }
+}
+.star-row path {
+  stroke: var(--brand-color);
+}

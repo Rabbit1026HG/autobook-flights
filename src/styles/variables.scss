@@ -1,0 +1,51 @@
+:root {
+  // Colors
+  --brand-color: #22c3a6;
+  --true-white: #ffffff;
+  --purple-dark: #1513a0;
+  --purple-blue-gradient: linear-gradient(90deg, #605dec 0%, #2a26d9 100%);
+  --purple-blue: #605dec;
+  --purple-light: #bcbaf7;
+  --purple-extra-light: #e9e8fc;
+  --purple-white: #f6f6fe;
+  --blue: #407aea;
+  --turquoise-gradient: linear-gradient(90deg, #5cd6c0 0%, #22c3a6 100%);
+  --turquoise: #5cd6c0;
+  --pink-gradient: linear-gradient(to right, #eb568c 0%, #ed5e76 100%) 1;
+  --red: #eb5757;
+  --grey-2: rgba(82, 82, 122, 0.2);
+  --red-light: #fdefef;
+  --purple-white-light: #fafafe;
+  --deep-green: #007b65;
+  --green-light: #eafffb;
+  --grey-100: #fafafa;
+  --grey-200: #cbd4e6;
+  --grey-300: #a1b0cc;
+  --grey-400: #7c8db0;
+  --grey-500: #657491;
+  --grey-600: #6e7491;
+  --grey-700: #52556f;
+  --grey-800: #36374a;
+  --grey-900: #27273f;
+
+  // Typography
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-md: 16px;
+  --font-lg: 18px;
+  --font-xl: 20px;
+
+  // elevation
+  --elevation-ultra-light: 0px 2px 2px rgba(28, 5, 77, 0.05),
+    0px 12px 8px rgba(0, 0, 0, 0.02);
+
+  --elevation-light: 0px 4px 8px rgba(28, 5, 77, 0.1),
+    0px 12px 32px rgba(0, 0, 0, 0.05);
+
+  --elevation-medium: 0px 2px 4px rgba(7, 4, 146, 0.1),
+    0px 24px 60px rgba(6, 47, 125, 0.05), 0px 12px 24px rgba(27, 59, 119, 0.05);
+
+  // breakpoints
+  --sm-screen: 350;
+  --md-screen: 1024;
+}

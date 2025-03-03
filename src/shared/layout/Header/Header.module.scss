@@ -1,0 +1,163 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  & > div:first-of-type {
+    display: flex;
+    align-items: center;
+    svg path {
+      stroke: var(--brand-color);
+    }
+  }
+
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+    img {
+      height: 36px;
+    }
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--grey-200);
+    opacity: 0.9;
+    color: black;
+    padding: 16px;
+    gap: 16px;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      gap: 16px;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      a {
+        color: var(--grey-700);
+      }
+      a:hover {
+        color: var(--grey-900);
+      }
+    }
+    .close-button {
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+      svg {
+        width: 48px;
+        height: 48px;
+      }
+      svg path {
+        stroke: var(--brand-color);
+      }
+      &:hover svg path {
+        stroke: var(--purple-dark);
+      }
+    }
+  }
+
+  .nav {
+    a {
+      text-decoration: none;
+      color: var(--grey-400);
+    }
+    a:hover {
+      color: var(--purple-dark);
+    }
+    a.active {
+      color: var(--brand-color);
+    }
+  }
+}
+.header.basic {
+  background-color: white;
+  .nav {
+    display: none;
+  }
+  .menu-icon {
+    display: block;
+  }
+}
+.nav {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  gap: 16px;
+  li {
+    list-style: none;
+    padding: 10px;
+  }
+}
+.avatar {
+  height: 40px;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 100%;
+  cursor: pointer;
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding: 14px 16px;
+    & > div {
+      & > svg {
+        display: block;
+      }
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      img {
+        height: 28px;
+      }
+    }
+  }
+
+  .nav {
+    padding: 0;
+    li {
+      display: none;
+    }
+  }
+  .avatar {
+    display: flex;
+    height: 32px;
+    width: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    .menu-icon {
+      display: block;
+    }
+    .nav li {
+      display: none;
+    }
+  }
+}

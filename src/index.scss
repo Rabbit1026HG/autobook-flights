@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,500;6..12,600;6..12,700;6..12,800&display=swap');
+@import './styles/variables.scss';
+@import './styles/common.scss';
+* {
+  font-family: 'Nunito Sans', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  color: var(--grey-900);
+  min-width: 380px;
+}
+h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 600;
+}
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+}
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+h5 {
+  font-size: 16px;
+  font-weight: 600;
+}
+h6 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+li {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--brand-color);
+  &:hover {
+    color: var(--purple-dark);
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c9c7c7;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

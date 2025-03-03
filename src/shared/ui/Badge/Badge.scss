@@ -1,0 +1,24 @@
+.badge {
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background-color: var(--turquoise);
+  color: white;
+  &.contrasted {
+    background-color: rgba(0, 178, 146, 1);
+  }
+}
+
+.badge.red {
+  background-color: var(--red);
+  &.contrasted {
+    background-color: rgba(227, 0, 0, 1);
+  }
+}
+
+.badge.orange {
+  background-color: rgba(250, 180, 141, 1);
+  &.contrasted {
+    background-color: rgba(255, 109, 28, 1);
+  }
+}
