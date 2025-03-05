@@ -2,8 +2,6 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: var(--elevation-light);
-  background-color: #E5E5E5;
-  height: 75px;
   img {
     height: 397px;
     width: 100%;
@@ -13,38 +11,22 @@
 
 .text {
   padding: 16px 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 .header-text {
   display: flex;
-  flex-direction: column;
-  color: black;
-  font-weight: bold;
-  gap: 10px;
-  width: 170px;
+  justify-content: space-between;
+  color: var(--grey-600);
 }
 .title {
   span {
-    color: black;
+    color: var(--brand-color);
   }
 }
 
 .description {
-  color: black;
+  color: var(--grey-400);
 }
 
 .full-card {
   margin-bottom: 40px;
-}
-
-.oprice {
-  text-decoration: line-through;
-}
-
-.place-text {
-  font-weight: bold;
-  flex: 1;
-  color: black;
 }
