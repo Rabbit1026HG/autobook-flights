@@ -12,11 +12,10 @@ interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   viewAllBottomButton?: string;
   cards: {
     img: string;
-    departure: string;
-    destination: string;
-    oprice: number;
-    price: number;
+    title: React.ReactNode | string;
+    description: string;
     saturation?: boolean;
+    price?: number;
   }[];
 }
 export const CardRow: FC<CardProps> = ({
@@ -46,7 +45,7 @@ export const CardRow: FC<CardProps> = ({
       </div>
       {viewAllBottomButton && (
         <Link to={viewAllUrl || '/'}>
-          <Button size="lg" variant="primary" type="button">
+          <Button size='lg' variant='primary' type='button'>
             {viewAllBottomButton}
           </Button>
         </Link>

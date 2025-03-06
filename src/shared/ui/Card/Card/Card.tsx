@@ -1,44 +1,39 @@
-import { FC, HTMLAttributes } from 'react';
+import { FC, HTMLAttributes, ReactNode } from 'react';
 import styles from './Card.module.scss';
 import clsx from 'clsx';
 interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 'title'> {
   img: string;
-  departure: string;
-  destination: string;
-  oprice: number;
-  price: number;
+  title: ReactNode | string;
+  description: string;
+  price?: number;
   saturation?: boolean;
+  spanColor?: string;
 }
 export const Card: FC<CardProps> = ({
-  // img,
+  img,
+  title,
+  description,
   className,
-  departure,
-  oprice,
   price,
-  destination,
-  // saturation,
+  saturation,
   ...other
 }) => {
   return (
     <div className={clsx('card', styles.card, className)} {...other}>
-      {/* <img
+      <img
         src={img}
-        alt=""
-        loading="lazy"
+        alt=''
+        loading='lazy'
         style={{ filter: saturation ? 'saturate(1.7)' : 'none' }}
-      /> */}
+      />
       <div className={clsx('text', styles['text'])}>
-        <div className={styles['place-text']}>
-          {`${departure} to ${destination}`}
+        <div className={clsx('header-text', styles['header-text'])}>
+          <h4 className={styles['title']}>{title}</h4>
+          {price && <h4 className={styles['price']}>${price}</h4>}
         </div>
-        <div className={styles['header-text']}>
-          <div>
-            Original price: <span className={styles['oprice']}>${oprice}</span>
-          </div>
-          <div>
-            Autobook price: <span className={styles['price']}>${price}</span>
-          </div>
-        </div>
+        <p className={clsx('description', styles['description'])}>
+          {description}
+        </p>
       </div>
     </div>
   );

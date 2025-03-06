@@ -12,47 +12,82 @@ export {
 };
 
 const flightDeals1 = [
+  // {
+  //   img: '/images/19.png',
+  //   departure: 'New York',
+  //   destination: 'Sydney',
+  //   oprice: 1850,
+  //   price: 925,
+  // },
+  // {
+  //   img: '/images/20.png',
+  //   departure: 'London',
+  //   destination: 'Sydney',
+  //   oprice: 640,
+  //   price: 360,
+  // },
+  // {
+  //   img: '/images/5.png',
+  //   departure: 'Paris',
+  //   destination: 'Vienna',
+  //   oprice: 194,
+  //   price: 85,
+  // },
+  // {
+  //   img: '/images/18.png',
+  //   departure: 'Los Angeles',
+  //   destination: 'Dubai',
+  //   oprice: 1671,
+  //   price: 851,
+  // },
+  // {
+  //   img: '/images/12.png',
+  //   departure: 'Atlanta',
+  //   destination: 'Chicago',
+  //   oprice: 157,
+  //   price: 73,
+  // },
+  // {
+  //   img: '/images/4.png',
+  //   departure: 'Los Angeles',
+  //   destination: 'San Francisco',
+  //   oprice: 97,
+  //   price: 58,
+  // },
   {
     img: '/images/19.png',
-    departure: 'New York',
-    destination: 'Sydney',
-    oprice: 1850,
-    price: 925,
+    title: (
+      <RowTitle info='The Bund, ' span='Shanghai' color='var(--brand-color)' />
+    ),
+    price: 598,
+    description: 'China’s most international city',
+    saturation: true,
   },
   {
     img: '/images/20.png',
-    departure: 'London',
-    destination: 'Sydney',
-    oprice: 640,
-    price: 360,
+    title: (
+      <RowTitle
+        info='Sydney Opera House, '
+        span='Sydney'
+        color='var(--brand-color)'
+      />
+    ),
+    price: 981,
+    description: 'Take a stroll along the famous harbor',
+    saturation: true,
   },
   {
     img: '/images/5.png',
-    departure: 'Paris',
-    destination: 'Vienna',
-    oprice: 194,
-    price: 85,
-  },
-  {
-    img: '/images/18.png',
-    departure: 'Los Angeles',
-    destination: 'Dubai',
-    oprice: 1671,
-    price: 851,
-  },
-  {
-    img: '/images/12.png',
-    departure: 'Atlanta',
-    destination: 'Chicago',
-    oprice: 157,
-    price: 73,
-  },
-  {
-    img: '/images/4.png',
-    departure: 'Los Angeles',
-    destination: 'San Francisco',
-    oprice: 97,
-    price: 58,
+    title: (
+      <RowTitle
+        info='Kōdaiji Temple, '
+        span='Kyoto'
+        color='var(--brand-color)'
+      />
+    ),
+    price: 633,
+    description: 'Step back in time in the Gion district',
+    saturation: true,
   },
 ];
 const topFlightDeal = {

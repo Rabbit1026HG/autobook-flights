@@ -1,9 +1,10 @@
 import { FlightHero } from '@features/flights/FlightHero/FlightHero';
 import { Reviews } from '@features/Reviews/Reviews';
-import { flightDeals1 } from '@shared/data';
+import {  flightDeals1, topFlightDeal } from '@shared/data';
 import { CardRow } from '@shared/ui/Card/CardRow/CardRow';
 import { RowTitle } from '@shared/ui/RowTitle/RowTitle';
 import styles from './style.module.scss';
+import { Card } from '@shared/ui/Card/Card/Card';
 export const FlightsHome = () => {
   return (
     <>
@@ -40,7 +41,7 @@ export const FlightsHome = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div>       
         <CardRow
           title={
             <RowTitle
@@ -52,7 +53,7 @@ export const FlightsHome = () => {
           cards={flightDeals1}
           viewAllUrl="/flights"
         />
-
+        <Card {...topFlightDeal} style={{ marginBottom: '40px' }} />
         <Reviews />
       </div>
     </>
